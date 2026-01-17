@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Ejercicio 1{% endblock %}
+{% block content %}
+    <h2>Ejercicio 1: Notas y Asistencia</h2>
+    <form method="POST">
+        <input type="number" name="nota1" placeholder="Nota 1 (10-70)" min="10" max="70" required>
+        <input type="number" name="nota2" placeholder="Nota 2 (10-70)" min="10" max="70" required>
+        <input type="number" name="nota3" placeholder="Nota 3 (10-70)" min="10" max="70" required>
+        <input type="number" name="asistencia" placeholder="Asistencia (0-100)" min="0" max="100" required>
+        <button type="submit">Enviar</button>
+    </form>
+    {% if promedio is defined %}
+        <div class="result">
+            <p>Promedio: {{ promedio }}</p>
+            <p>Estado: {{ estado }}</p>
+        </div>
+    {% endif %}
+{% endblock %}

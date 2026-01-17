@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Ejercicio 2{% endblock %}
+{% block content %}
+    <h2>Ejercicio 2: Nombres</h2>
+    <form method="POST">
+        <input type="text" name="nombre1" placeholder="Nombre 1" required>
+        <input type="text" name="nombre2" placeholder="Nombre 2" required>
+        <input type="text" name="nombre3" placeholder="Nombre 3" required>
+        <button type="submit">Enviar</button>
+    </form>
+    {% if nombre_largo is defined %}
+        <div class="result">
+            <p>Nombre más largo: {{ nombre_largo }}</p>
+            <p>Cantidad de caracteres: {{ longitud }}</p>
+        </div>
+    {% endif %}
+{% endblock %}
